@@ -4,12 +4,14 @@ from PIL import Image
 from binascii import a2b_base64
 from flask import Flask,request,jsonify, render_template
 import numpy as np
+import cv2
 import json
 import keras_vggface
 from numpy import expand_dims
 from matplotlib import pyplot
 from PIL import Image
 from numpy import asarray
+from mtcnn.mtcnn import MTCNN
 from keras_vggface.vggface import VGGFace
 from keras_vggface.utils import preprocess_input
 from keras_vggface.utils import decode_predictions
@@ -18,13 +20,6 @@ import tensorflow as tf
 import tqdm
 from face_recognition_util import *
 tf.compat.v1.disable_eager_execution()
-
-import importlib
-from cv2 import *
-from .data import *
-#wildcard import above does not import "private" variables like __version__
-#this makes them available
-globals().update(importlib.import_module('cv2').__dict__)
 
 app = Flask(__name__, template_folder="views")
 
