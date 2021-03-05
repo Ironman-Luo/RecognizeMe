@@ -53,11 +53,11 @@ from .data import *
 #wildcard import above does not import "private" variables like __version__
 #this makes them available
 globals().update(importlib.import_module('cv2').__dict__)
-'''
+
 
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml') 
 eye_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_eye_tree_eyeglasses.xml') 
-
+'''
 def extract_face(filename, required_size=(224, 224)):
 	pixels = pyplot.imread(filename)
 	detector = MTCNN()
