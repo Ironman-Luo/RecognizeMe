@@ -31,7 +31,6 @@ import base64
 from io import BytesIO
 from PIL import Image
 from binascii import a2b_base64
-import skimage.io as ski
 from flask import Flask,request,jsonify, render_template
 import numpy as np
 import cv2
@@ -41,7 +40,6 @@ from numpy import expand_dims
 from matplotlib import pyplot
 from PIL import Image
 from numpy import asarray
-from mtcnn.mtcnn import MTCNN
 from keras_vggface.vggface import VGGFace
 from keras_vggface.utils import preprocess_input
 from keras_vggface.utils import decode_predictions
