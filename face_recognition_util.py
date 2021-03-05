@@ -33,7 +33,6 @@ from PIL import Image
 from binascii import a2b_base64
 from flask import Flask,request,jsonify, render_template
 import numpy as np
-import cv2
 import json
 import keras_vggface
 from numpy import expand_dims
@@ -47,6 +46,12 @@ from scipy.spatial.distance import cosine
 import tensorflow as tf
 import tqdm
 
+import importlib
+from cv2 import *
+from .data import *
+#wildcard import above does not import "private" variables like __version__
+#this makes them available
+globals().update(importlib.import_module('cv2').__dict__)
 
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml') 
 eye_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_eye_tree_eyeglasses.xml') 
