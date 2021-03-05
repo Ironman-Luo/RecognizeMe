@@ -1,6 +1,5 @@
 pybase64==1.1.4
 Pillow==8.1.0
-scikit-image==0.16.2
 Flask==1.1.2
 numpy==1.16.0
 keras-vggface==0.6
