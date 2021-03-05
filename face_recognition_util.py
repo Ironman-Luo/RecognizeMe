@@ -31,17 +31,12 @@ import base64
 from io import BytesIO
 from PIL import Image
 from binascii import a2b_base64
-# import matplotlib.image as mpimg
-# import matplotlib.pyplot as plt
 import skimage.io as ski
 from flask import Flask,request,jsonify, render_template
 import numpy as np
 import cv2
-import base64
 import json
-import numpy as np
 import keras_vggface
-import mtcnn
 from numpy import expand_dims
 from matplotlib import pyplot
 from PIL import Image
@@ -53,8 +48,6 @@ from keras_vggface.utils import decode_predictions
 from scipy.spatial.distance import cosine
 import tensorflow as tf
 import tqdm
-from facenet_pytorch import MTCNN as mtcnn
-import torch
 
 
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml') 
