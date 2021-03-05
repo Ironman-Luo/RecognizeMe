@@ -21,12 +21,6 @@ from face_recognition_util import *
 tf.compat.v1.disable_eager_execution()
 
 import importlib
-from cv2 import *
-from .data import *
-#wildcard import above does not import "private" variables like __version__
-#this makes them available
-globals().update(importlib.import_module('cv2').__dict__)
-
 app = Flask(__name__, template_folder="views")
 
 
