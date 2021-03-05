@@ -94,7 +94,9 @@ def submit():
 
 		if identified_user[1] < 0.4:
 			if extra_credit == True:
+				'''
 				app.logger.info("Detecting eye blinks...")
+				
 				eye_detection_result = []
 				while i < len(pictures):
 					eye_detection_result.append(detect_eye_open(pictures[i]))
@@ -102,9 +104,9 @@ def submit():
 				app.logger.info("Finish detecting eye blinks")
 				app.logger.info(eye_detection_result)
 				if max(eye_detection_result) - min(eye_detection_result) == 0:
-					return render_template("unauthorized.html")
-				else:
-					return render_template("logged_in.html", name=identified_user[0])
+				
+				return render_template("unauthorized.html")
+				'''
 			else:
 				return render_template("logged_in.html", name=identified_user[0])
     	# Pass in data to ML model and check if the user has been authorized or not
