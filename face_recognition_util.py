@@ -45,7 +45,7 @@ from keras_vggface.utils import preprocess_input
 from keras_vggface.utils import decode_predictions
 from scipy.spatial.distance import cosine
 import tqdm
-
+import cv2
 import importlib
 '''
 from cv2 import *
@@ -54,10 +54,10 @@ from .data import *
 #this makes them available
 globals().update(importlib.import_module('cv2').__dict__)
 
-
+'''
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml') 
 eye_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_eye_tree_eyeglasses.xml') 
-'''
+
 def extract_face(filename, required_size=(224, 224)):
 	pixels = pyplot.imread(filename)
 	detector = MTCNN()
@@ -131,7 +131,7 @@ def get_user_score():
 	model_scores_recorded = get_model_scores(user_images)
 	return model_scores_recorded,names
 
-'''
+
 def detect_eye_open(frame):
 	#Initializing the face and eye cascade classifiers from xml files 
 	frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -154,4 +154,4 @@ def detect_eye_open(frame):
 		return 0
 	else:
 		return 1
-'''
+
