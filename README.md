@@ -7,7 +7,10 @@ If you click login:
   second photo is captured after one second you click login.
 Then we will match yout face to our existing database, and once a match has been formed, you will return to welcome page.
 If no face is detected or no face is matched, you are not welcomed.
-if you click sign up, we will capture one photo from you and this photo will be added to our database.
+if you click sign up, we will capture one photo from you and this photo will be added to our database with the name you entered.
+Note that our database is simple just the images folder. 
+Do not rename any picutures in images you can replace your picture but please be sure to have the same name and format.
+If you want to change your picuture, change corresponding user.json as well.
 
 # Instructions:
 
@@ -18,6 +21,8 @@ In order to get all packages setup, you need to enter into this folder and run
 ``
 
 After getting all packages required, you need to run `` python app.py `` in your terminal and follow the link provided. 
+
+
 
 
 # Note: Please Be Sure to let the camera capture you both open and close eyes
