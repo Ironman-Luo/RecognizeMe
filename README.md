@@ -9,10 +9,11 @@ Then we will match yout face to our existing database, and once a match has been
 If no face is detected or no face is matched, you are not welcomed.
 if you click sign up, we will capture one photo from you and this photo will be added to our database.
 
-# Note
+# Note: Please Be Sure to let the camera capture you both open and close eyes
 Normal version does not do the extra_credit work.
 If you want to test for extra credit:
   set variable extra_credit in app.py submit() function to True.
-If you are a real human, you can open your eye for half a second then close your eye in order to login.
+If you are a real human, you can open your eye for half a second then close your eye for one second in order to login.
 If the camera did not capture both your closed_eye picture and open_eye picture, it will not let you in.
+
 
