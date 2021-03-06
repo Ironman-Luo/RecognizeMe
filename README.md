@@ -9,12 +9,16 @@ Then we will match yout face to our existing database, and once a match has been
 If no face is detected or no face is matched, you are not welcomed.
 if you click sign up, we will capture one photo from you and this photo will be added to our database.
 
-#Instructions:
-In order to get all packages setup, you need to run 
+# Instructions:
 
-```
+In order to get all packages setup, you need to enter into this folder and run 
+
+``
   pip install -r requirements.txt
-```
+``
+
+After getting all packages required, you need to run `` python app.py `` in your terminal and follow the link provided. 
+
 
 # Note: Please Be Sure to let the camera capture you both open and close eyes
 Normal version does not do the extra_credit work.
