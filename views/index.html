@@ -40,12 +40,12 @@
         context.drawImage(player, 0, 0, canvas.width, canvas.height);
         frames[i] = canvas.toDataURL();
         i++;
-        if (i == 30) {
+        if (i == 2) {
           clearInterval();
           document.getElementById('video_feed').value = JSON.stringify(frames);
           document.getElementById('webcam_form').submit();
         }
-      }, 33);
+      }, 1000);
     });
 
     // Attach the video stream to the video element and autoplay.
