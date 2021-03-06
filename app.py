@@ -79,9 +79,6 @@ def submit():
 		app.logger.info("Retrieving scores...")
 		app.logger.info("Input shape is: " + str(np.array(frames).shape))
 
-		# Check if any frames were saved. if not then unauthorized
-		if (len(frames) < 7):
-			return render_template("unauthorized.html")
 
 		input_face_score = get_model_scores(np.array(frames))
 
@@ -98,6 +95,7 @@ def submit():
 				app.logger.info("Detecting eye blinks...")
 				
 				eye_detection_result = []
+				i = 0
 				while i < len(pictures):
 					eye_detection_result.append(detect_eye_open(pictures[i]))
 					i += frequency
@@ -105,7 +103,9 @@ def submit():
 				app.logger.info(eye_detection_result)
 				if max(eye_detection_result) - min(eye_detection_result) == 0:
 				
-				return render_template("unauthorized.html")
+					return render_template("unauthorized.html")
+				else:
+					return render_template("logged_in.html", name=identified_user[0])
 				
 			else:
 				return render_template("logged_in.html", name=identified_user[0])
