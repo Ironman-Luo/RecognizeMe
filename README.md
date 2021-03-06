@@ -16,4 +16,5 @@ If you want to test for extra credit:
 If you are a real human, you can open your eye for half a second then close your eye for one second in order to login.
 If the camera did not capture both your closed_eye picture and open_eye picture, it will not let you in.
 
+(Do not use HeroKu App link for website, it is not set up yet)
 
